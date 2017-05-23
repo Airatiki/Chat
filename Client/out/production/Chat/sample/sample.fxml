@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+   <children>
+
+      <VBox prefHeight="292.0" prefWidth="357.0">
+         <children>
+            <MenuBar fx:id="menuBar" >
+               <menus>
+                  <Menu text="Options" >
+                     <items>
+                        <MenuItem text="Connect To Server" onAction="#getConnection" />
+                        <MenuItem text="Exit" onAction="#onExit" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <TextArea fx:id="area" prefHeight="238.0" prefWidth="357.0" editable="false"/>
+            <TextField fx:id="sendBat" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="300.0" />
+            <Button contentDisplay="RIGHT" onAction="#sendText" text="Send" />
+
+         </children></VBox>
+   </children>
+
+</GridPane>
